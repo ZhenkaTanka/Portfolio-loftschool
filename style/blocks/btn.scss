@@ -1,0 +1,35 @@
+.btn {
+    display: inline-block;
+    color: white;
+    @include fira(bold);
+    font-size: 14px;
+    
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    
+    
+    &_blue:hover {
+        color: $blue;
+        background-color: white;
+    }
+    
+    &_red {
+        color: $red;
+        border-color: $red;
+        
+        &:hover {
+            background-color: $red;
+            color: white;
+        }
+    }
+}
+
+.btn__fontawesome {
+    font-family: 'fontawesome';
+    margin-right: 5px;
+}

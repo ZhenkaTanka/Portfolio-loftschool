@@ -1,0 +1,102 @@
+.about-me {
+    float: right;
+    width: 720px;
+}
+
+.about-me__photo {
+    float: left;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 5px solid white;
+    overflow: hidden;
+    margin-left: 55px;
+    margin-right: 55px;
+    
+    img {
+        height: 100%;
+    }
+}
+
+.about-me__content {
+    float: right;
+    width: 380px;
+}
+
+.about-me__title-text {
+    margin: 0;
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 15px;
+}
+
+.about-me__info {
+    max-height: 320px;
+    overflow: auto;
+    @include fira(light);
+    font-size: 18px;
+    color: #646464;
+    line-height: 26px;
+    margin-bottom: 50px;   
+    
+    
+    p {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        background-color: #d8d8d8;
+    }
+
+    &::-webkit-scrollbar-thumb:hover{
+        background-color: $blue;
+    }
+
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+}
+
+.about-me-download {
+    text-align: right;
+}
+
+@include mobile {
+    .about-me {
+        float: none;
+        width: 100%;
+    }
+    
+    .about-me__photo {
+        float: none;
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+    }
+    
+    .about-me__content {
+        width: 100%;
+    }
+    
+    .about-me__title {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .about-me__info {
+        max-height: none;
+        margin-bottom: 10px;
+    }
+    
+    .about-me-download {
+        text-align: center;
+    }
+}

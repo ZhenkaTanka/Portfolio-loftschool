@@ -1,0 +1,39 @@
+.author {
+    float: left;
+}
+
+.author__photo {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #d4d4d4;
+    margin-right: 15px;
+    vertical-align: middle;
+    
+    img {
+        height: 100%;
+    }
+}
+
+.author__name {
+    display: inline-block;
+    
+    color: $black;
+    font-size: 18px;
+    line-height: 28px;
+    vertical-align: middle;
+    
+    margin-top: 5px;
+}
+
+@include mobile {
+    .author {
+        max-width: 220px;
+    }
+    
+    .author__name {
+        max-width: 130px;
+    }
+}

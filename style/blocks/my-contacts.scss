@@ -1,0 +1,103 @@
+.my-contacts {
+    float: right;
+    position: relative;
+    margin-top: 24px;
+    
+    &:hover .my-contacts__hover {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.my-contacts__link {
+    @include fira(bold);
+    color: $blue;
+    border-bottom: 1px dotted $blue;
+    
+    &:hover {
+        color: $red;
+        border-color: $red;
+    }
+    
+    &_mobile {
+        display: none;
+    }
+}
+
+.my-contacts__hover {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    right: -55%;
+    border: 1px solid #dedede;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        top: -11px;
+        left: 50%;
+        margin-left: -10px;
+        transform: rotateZ(45deg);
+        border-left: 1px solid #dedede;
+        border-top: 1px solid #dedede;
+    }
+}
+
+.my-contacts__item {
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    
+    &:not(:last-child) {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #dedede;
+    }
+}
+
+.my-contants__item-link {
+    color: $black;
+    white-space: nowrap;
+    
+    &:hover {
+        color: $blue;
+    }
+}
+
+.my-contacts__icon-blue {
+    display: inline-block;
+    font-family: 'fontawesome';
+    color: $blue;
+    width: 10px;
+    margin-right: 20px;
+}
+
+@include mobile {
+    
+    .my-contacts {
+        margin-top: 10px;
+    }
+    
+    
+    .my-contacts__link {
+        display: none;
+        
+        &_mobile {
+            display: block;
+            font-family: 'FontAwesome';
+            font-size: 40px;
+            border: none;
+            vertical-align: middle;
+            margin: 0;
+        }
+    }
+}
